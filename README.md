@@ -1,2 +1,3 @@
-# Recuperatorio Parcial 2
-Repositorio del recuperatorio del segundo parcial de Informática General
+Nahiara Aylen Sosto
+Recuperatorio Segundo Parcial - Informática General 
+Artes Multimediales - UNA
