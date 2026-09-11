@@ -25,3 +25,22 @@ botonDatosCuriosos.addEventListener('click', function () {
     pantallaDatosCuriosos.innerHTML = resultado;
 
 });
+
+// GALERÍA DE OBRAS
+
+let galeria = document.querySelector('.galeriaDeObras');
+
+galeria.innerHTML =
+    '<div class="obra"><img src="../img/reas-1.jpg" alt="Imagen de la serie Still Life, 2016">' +
+    '<p>Still life, 2016</p></div>' +
+    '<div class="obra"><img src="../img/reas-4.jpg" alt="Imagen de la obra CSRSNT-MRIE-24-OF-32.PNG, 2025">' +
+    '<p>CSRSNT-MRIE-24-OF-32.PNG, 2025</p></div>' +
+    '<div class="obra"><img src="../img/reas-2.jpg" alt="Imagen de la serie Path, 2001">' +
+    '<p>Path, 2001</p></div>' +
+    '<div class="obra"><img src="../img/reas-5.jpg" alt="Imagen de la obra CENTURY-XXX-METAJUDD, 2025">' +
+    '<p>CENTURY-XXX-METAJUDD, 2025</p></div>' +
+    '<div class="obra"><img src="../img/reas-6.jpg" alt="Imagen de la obra Study for a Garden of Earthly Delights, No. 4, 2018">' +
+    '<p>Study for a Garden of Earthly Delights, No. 4, 2018</p></div>';
+
+    
+let botonGaleria = document.querySelector('#botonGaleria');

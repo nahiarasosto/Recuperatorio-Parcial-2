@@ -108,13 +108,64 @@ article ul li {
 
 /* COLUMNA 2 */
 
-.segundaColumnaIndex,
-.segundaColumnaObras {
+.segundaColumnaIndex {
     background-color: #e3e1fd;
     width: 30%;
     padding: 2rem;
     border-radius: 0.5rem;
 }
+
+.segundaColumnaObras {
+    width: 35%;
+}
+
+.segundaColumnaObras section {
+    background-color: #e3e1fd;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* GALERÍA DE OBRAS */
+
+/* GALERÍA */
+
+.galeria {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #e3e1fd;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  font-family: Arial, sans-serif;
+}
+
+#tituloGaleria {
+  width: 100%;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.galeria .obra {
+  width: 30%;
+  display: flex;
+  flex-direction: column; 
+}
+
+.galeria .obra img {
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+}
+
+.galeria .obra p {
+  font-size: 0.8rem;
+  font-family: Arial, sans-serif;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 
 /* COLUMNA 3 */
 
@@ -139,7 +190,7 @@ article ul li {
 
 .primerColumnaInfo {
     background-color: #e3e1fd;
-    width: 45%;
+    width: 30%;
     padding: 1.5rem;
     border-radius: 0.5rem;
     order: 1;
@@ -147,7 +198,7 @@ article ul li {
 
 footer.segundaColumnaInfo {
     background-color: #e3e1fd;
-    width: 45%;
+    width: 50%;
     padding: 2rem;
     border-radius: 0.5rem;
     order: 2;
@@ -156,13 +207,13 @@ footer.segundaColumnaInfo {
 
 main.segundaColumnaInfo {
     background-color: #e3e1fd;
-    width: 45%;
+    width: 70%;
     padding: 2rem;
     border-radius: 0.5rem;
     order: 3;
     margin-left: auto;
-    margin-top: 2rem;
 }
+
 
 /* DATOS CURIOSOS */
 
@@ -196,13 +247,17 @@ button:active {
 
 /* RESULTADOS */
 
+.bloqueCuriosidades {
+    margin-top: 1rem;
+}
+
 .bloqueCurioso {
     font-family: Arial, sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
     color: #6399ff;
     background-color: #161f9e;
-    margin-top: 2%;
+    margin-top: 0.5rem;
     padding: 1rem;
     border-radius: 0.2rem;
 }
