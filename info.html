@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Casey Reas - Información al artista</title>
+    <title>Casey Reas - Información del artista</title>
     <link href="css/estilos.css" rel="stylesheet">
 </head>
 
@@ -17,11 +17,12 @@
             <p class="subtitulo">Código, sistemas y arte generativo contemporáneo</p>
             <p class="cita">“Una obra puede ser definida como un sistema y ejecutada en múltiples formas.” — Casey Reas
             </p>
+            <hr>
             <nav>
                 <ul>
                     <li><a href="index.html">Página principal</a></li>
-                    <li><a href="info.html">Información extra</a></li>
                     <li><a href="obras.html">Sus obras</a></li>
+                    <li><a href="info.html">Información extra</a></li>
                 </ul>
             </nav>
         </header>
@@ -48,22 +49,53 @@
                         como un elemento central. Cada vez que el sistema se ejecuta, puede producir un resultado
                         diferente, lo que transforma la noción de originalidad y repetición en el arte digital.</p>
                 </article>
-                <aside>
-                    <h4 class="tituloGaleria"> Galería de obras </h4>
-                    <button type="button" id="botonGaleria">Hace click para cambiar el diseño!</button>
-                    <div class="galeriaDeObras"></div>
-                </aside>
+
+                <!-- EJERCICIO -->
+
+                <form action="#" method="get">
+                    <h4>Producción de instalaciones, estudio Casey Reas</h4>
+                    <p>Ingresa datos en los siguientes campos para gestionar la gran variedad de instalaciones
+                        interactivas
+                        del estudio de Casey Reas</p>
+                    <fieldset>
+                        <legend>Datos producción</legend>
+                        <label for="nombreInstalacion">Nombre de la instalación</label>
+                        <input type="text" name="nombreInstalacion" id="nombreInstalacion" required>
+                        <label for="numeroPersonas">Número de personal necesario</label>
+                        <input type="number" name="numeroPersonas" id="numeroPersonas" required>
+                        <label for="numeroDias">Días estimados</label>
+                        <input type="number" name="numeroDias" id="numeroDias" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Datos monetarios</legend>
+                        <label for="numeroHoras">Horas de trabajo por día</label>
+                        <input type="number" name="numeroHoras" id="numeroHoras" required>
+                        <label for="numeroCobro">Honorario por hora</label>
+                        <input type="number" name="numeroCobro" id="numeroCobro" required>
+                    </fieldset>
+                    <button type="submit" id="botonEnviar">Enviar</button>
+                    <button type="button" id="botonResultados">Resultados</button>
+                    <button type="reset" class="oculto" id="botonReset">Reiniciar</button>
             </section>
+
+            <!-- RESULTADOS -->
+
+            <section id="resultadosFormulario" class="oculto">
+            </section>
+            </form>
         </main>
-        <footer class="segundaColumnaInfo">
+
+        <!-- TERCERA COLUMNA -->
+
+        <footer class="tercerColumnaInfo">
             <address>
                 Para contactarse escribir a <a href="mailto:casey@artedigital.com">casey@artedigital.com</a>
                 <hr>
                 O visitá el sitio web oficial: <a href="https://reas.com/">https://reas.com/</a>
             </address>
         </footer>
-    </div>
-    <script src="js/script.js"></script>
+        <script src="js/script.js"></script>
     </div>
 </body>
+
 </html>

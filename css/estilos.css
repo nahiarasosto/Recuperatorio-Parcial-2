@@ -68,11 +68,16 @@ header nav ul li a:visited {
 
 /* TITULOS Y TEXTO */
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Arvo', serif;
     font-size: 2.2rem;
     color: #0d1525;
     margin-bottom: 3%;
+    margin-top: 3%;
 }
 
 p,
@@ -91,11 +96,11 @@ article ul li {
     font-size: 1.4rem;
 }
 
-/* COLUMNAS INDEX Y OBRAS */
+/* COLUMNAS INDEX E INFO */
 
 /* COLUMNA 1 */
 .primerColumnaIndex,
-.primerColumnaObras {
+.primerColumnaInfo {
     background-color: #e3e1fd;
     width: 30%;
     padding: 1.5rem;
@@ -112,11 +117,12 @@ article ul li {
     border-radius: 0.5rem;
 }
 
-.segundaColumnaObras {
+.segundaColumnaInfo {
     width: 35%;
 }
 
-.segundaColumnaObras section {
+.segundaColumnaInfo section,
+.segundaColumnaInfo form {
     background-color: #e3e1fd;
     padding: 2rem;
     border-radius: 0.5rem;
@@ -127,45 +133,94 @@ article ul li {
 /* GALERÍA */
 
 .galeriaDeObras {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: #e3e1fd;
-  padding: 2rem;
-  font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #e3e1fd;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
 }
 
 .tituloGaleria {
-  width: 100%;
-  font-size: 2rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+    width: 100%;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .galeriaDeObras .obra {
-  display: flex;
-  flex-direction: column; 
-  width: 30%; 
+    display: flex;
+    flex-direction: column;
+    width: 30%;
 }
 
 .galeriaDeObras .obra img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 0.5rem; 
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
 }
 
 .galeriaDeObras .obra p {
-  font-size: 0.8rem;
-  font-family: Arial, sans-serif;
-  margin-top: 0;
-  margin-bottom: 0;
+    font-size: 0.8rem;
+    font-family: Arial, sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* FORMULARIO (INFO) */
+
+fieldset {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset legend {
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 5%;
+    font-weight: bold;
+    width: 60%;
+}
+
+fieldset input {
+    width: 60%;
+    font-size: 1.2rem;
+    margin-bottom: 5%;
+}
+
+fieldset label {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1%;
+    align-self: center;
+}
+
+form button {
+    margin-top: 5%;
+}
+
+.oculto {
+  display: none;
+}
+
+form #resultadosFormulario {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6399ff;
+    background-color: #161f9e;
+    margin-top: 3%;
+    padding: 1rem;
+    border-radius: 0.2rem;
 }
 
 /* COLUMNA 3 */
 
 .tercerColumnaIndex,
-.tercerColumnaObras {
+.tercerColumnaInfo {
     background-color: #e3e1fd;
     width: 30%;
     padding: 1.5rem;
@@ -179,11 +234,11 @@ article ul li {
     list-style: none;
 }
 
-/* COLUMNAS INFO */
+/* COLUMNAS OBRAS */
 
 /* COLUMNA 1 */
 
-.primerColumnaInfo {
+.primerColumnaObras {
     background-color: #e3e1fd;
     width: 30%;
     padding: 1.5rem;
@@ -191,7 +246,7 @@ article ul li {
     order: 1;
 }
 
-footer.segundaColumnaInfo {
+footer.segundaColumnaObras {
     background-color: #e3e1fd;
     width: 50%;
     padding: 2rem;
@@ -200,7 +255,7 @@ footer.segundaColumnaInfo {
     margin-bottom: auto;
 }
 
-main.segundaColumnaInfo {
+main.segundaColumnaObras {
     background-color: #e3e1fd;
     width: 70%;
     padding: 2rem;
@@ -286,12 +341,12 @@ footer address a:visited {
 
 hr {
     border: none;
-  height: 0.4rem;
-  background-color: #0d1525;
-  border-radius: 0.2rem;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+    height: 0.4rem;
+    background-color: #0d1525;
+    border-radius: 0.2rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }

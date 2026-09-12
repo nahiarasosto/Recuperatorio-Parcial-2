@@ -2,19 +2,25 @@
 
 Armar para gestionar la producción de instalaciones interactivas del estudio artístico de Casey Reas.
 
-Se deberán ingresar los datos de la cantidad de instalaciones a producir y, por cada instalación, su nombre, la cantidad de personas necesarias para el trabajo y la cantidad de días estimados de producción. Ingresar también la cantidad de horas por día que trabajan las personas y el valor del honorario por hora que cobran. 
+Se deberán ingresar los datos de la cantidad de instalaciones a producir y, por cada instalación:
+1. Su nombre 
+2. La cantidad de personas necesarias para el trabajo
+3. La cantidad de días estimados de producción
+
+Ingresar también:
+1. La cantidad de horas por día que trabajan las personas
+2. El valor del honorario por hora que cobran. 
 
 Se quiere conocer:
 1. el costo total de un día de trabajo considerando el total de las personas que trabajan en el estudio
 2. la instalación cuya producción es la que necesita más días de producción y su costo total
 3. qué porcentaje del costo total del estudio (considerando que se completa la producción de todas las instalaciones) representa el costo de la instalación de más días de producción
-
 Una vez que se obtienen los resultados se debe habilitar un botón para reiniciar.
 
 »»»»» Tener en cuenta «««««
 
-- Todos los datos deben ser validados.
 - Los datos deben ser ingresados utilizando formularios.
+- Todos los datos deben ser validados.
 - Se deben habilitar y deshabilitar las opciones para el ingreso de datos según lo requiera cada momento de ejecución.
 -- Cuando se debe ingresar una cantidad determinada de datos y se cumple esa cantidad, se debe deshabilitar la opción para seguir ingresando.
 -- Las opciones para calcular resultados no se deben habilitar hasta que se haya finalizado la carga de datos necesaria para poder realizar los cálculos. 
