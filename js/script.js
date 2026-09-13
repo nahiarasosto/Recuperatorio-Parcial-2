@@ -1,3 +1,7 @@
+/* ACLARACIÓN: tuve un problema al ejecutar el sitio
+que si el navegador veìa código pertenecienta a una página que no era en la que se estaba
+salta error en la consola, usar if fue la mejor solución que encontré */
+
 /* INDEX.HTML - DATOS CURIOSOS */
 
 const datosCuriosos = [
@@ -125,6 +129,7 @@ if (form) {
         let maxInstalacion = lista[0];
 
         // BUCLE PARA CALCULAR
+        
         for (let i = 0; i < lista.length; i++) {
             const inst = lista[i];
 
@@ -178,3 +183,4 @@ if (form) {
         botonReset.classList.add('oculto');
     });
 }
+
