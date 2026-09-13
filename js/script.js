@@ -1,14 +1,6 @@
-/*ACLARACIÓN: tuve un problema que al ejecutar un evento 
-la consola mostraba error porque intentaba leer al mismo tiempo eventos pertenecientes a otras páginas del sitio
-Usar if fue la mejor solución que encontré
-*/
+/* INDEX.HTML - DATOS CURIOSOS */
 
-//INDEX.HTML
-
-// DATOS CURIOSOS
-// EL ARRAY Y LOS ELEMENTOS PARA COMPROBAR SI ESTÁ O NO Y QUE NO HAYA ERROR EN LA CONSOLA
-
-let datosCuriosos = [
+const datosCuriosos = [
     'Casey Reas es co-creador de Processing, un lenguaje de programación visual diseñado para artistas y estudiantes de diseño.',
     'Junto a Ben Fry desarrolló Processing como una herramienta educativa en el MIT Media Lab en 2001.',
     'Su obra artística se basa en la escritura de algoritmos que generan imágenes en constante cambio.',
@@ -21,205 +13,168 @@ let datosCuriosos = [
     'Además de visuales digitales, ha realizado impresiones generativas de gran formato como obras únicas o en series.'
 ];
 
-let botonDatosCuriosos = document.querySelector('#botonCurioso');
-let pantallaDatosCuriosos = document.querySelector('.bloqueCurioso');
-
+const botonDatosCuriosos = document.querySelector('#botonCurioso');
+const pantallaDatosCuriosos = document.querySelector('.bloqueCurioso');
 
 if (botonDatosCuriosos && pantallaDatosCuriosos) {
-    botonDatosCuriosos.addEventListener('click', function () {
-
-        let indiceAleatorio = Math.floor(Math.random() * datosCuriosos.length);
-
-        let resultado = datosCuriosos[indiceAleatorio];
+    
+    botonDatosCuriosos.addEventListener('click', () => {
+        const indiceAleatorio = Math.floor(Math.random() * datosCuriosos.length);
+        const resultado = datosCuriosos[indiceAleatorio];
 
         pantallaDatosCuriosos.innerHTML = resultado;
-
     });
 }
 
-// OBRAS.HTML
+/* OBRAS.HTML - GALERÍA DE OBRAS */
 
-// GALERÍA DE OBRAS
-// LA GALERÍA PARA COMPROBAR SI ESTÁ O NO Y QUE NO HAYA ERROR EN LA CONSOLA
-
-let galeria = document.querySelector('.galeriaDeObras');
-let botonGaleria = document.querySelector('#botonGaleria');
+const galeria = document.querySelector('.galeriaDeObras');
+const botonGaleria = document.querySelector('#botonGaleria');
 
 if (galeria && botonGaleria) {
 
     // GALERÍA INICIAL
+    
+    galeria.innerHTML =
+        '<div class="obra"><img src="./img/reas-1.jpg" alt="Imagen de la serie Still Life, 2016">' +
+        '<p>Still life, 2016</p></div>' +
+        '<div class="obra"><img src="./img/reas-4.jpg" alt="Imagen de la obra CSRSNT-MRIE-24-OF-32.PNG, 2025">' +
+        '<p>CSRSNT-MRIE-24-OF-32.PNG, 2025</p></div>' +
+        '<div class="obra"><img src="./img/reas-2.jpg" alt="Imagen de la serie Path, 2001">' +
+        '<p>Path, 2001</p></div>' +
+        '<div class="obra"><img src="./img/reas-5.jpg" alt="Imagen de la obra CENTURY-XXX-METAJUDD, 2025">' +
+        '<p>CENTURY-XXX-METAJUDD, 2025</p></div>' +
+        '<div class="obra"><img src="./img/reas-6.jpg" alt="Imagen de la obra Study for a Garden of Earthly Delights, No. 4, 2018">' +
+        '<p>Study for a Garden of Earthly Delights, No. 4, 2018</p></div>';
 
-    // RENDERIZADO INICIAL DE LA GALERÍA
-galeria.innerHTML = 
-  '<div class="obra"><img src="./img/reas-1.jpg" alt="Imagen de la serie Still Life, 2016">' + 
-  '<p>Still life, 2016</p></div>' + 
-  '<div class="obra"><img src="./img/reas-4.jpg" alt="Imagen de la obra CSRSNT-MRIE-24-OF-32.PNG, 2025">' + 
-  '<p>CSRSNT-MRIE-24-OF-32.PNG, 2025</p></div>' + 
-  '<div class="obra"><img src="./img/reas-2.jpg" alt="Imagen de la serie Path, 2001">' + 
-  '<p>Path, 2001</p></div>' + 
-  '<div class="obra"><img src="./img/reas-5.jpg" alt="Imagen de la obra CENTURY-XXX-METAJUDD, 2025">' + 
-  '<p>CENTURY-XXX-METAJUDD, 2025</p></div>' + 
-  '<div class="obra"><img src="./img/reas-6.jpg" alt="Imagen de la obra Study for a Garden of Earthly Delights, No. 4, 2018">' + 
-  '<p>Study for a Garden of Earthly Delights, No. 4, 2018</p></div>';
-
-// CAMBIA LA GALERÍA AL HACER CLICK
-botonGaleria.addEventListener('click', function () { 
-  galeria.innerHTML = 
-    '<div class="obra"><img src="./img/reas-3.jpg" alt="Imagen de la serie Still Life, 2016">' + 
-    '<p>Still life, 2016</p></div>' + 
-    '<div class="obra"><img src="./img/reas-7.jpg" alt="Imagen de la obra DETAIL OF PROCESS 13 from PRocess compendium, 2010">' + 
-    '<p>DETAIL OF PROCESS 13 from PRocess compendium, 2010</p></div>' + 
-    '<div class="obra"><img src="./img/reas-8.jpg" alt="Imagen de la obra Still from atoms, 2023">' + 
-    '<p>Still from atoms, 2023</p></div>' + 
-    '<div class="obra"><img src="./img/reas-9.jpg" alt="Imagen de la obra Microimage A-06, 2002">' + 
-    '<p>Microimage A-06, 2002</p></div>' + 
-    '<div class="obra"><img src="./img/reas-10.jpg" alt="Imagen de la serie Details of process, 2005">' + 
-    '<p>Details of process, 2005</p></div>'; 
-});
+    // CAMBIA LA GALERÍA AL HACER CLICK
+    
+    botonGaleria.addEventListener('click', () => {
+        galeria.innerHTML =
+            '<div class="obra"><img src="./img/reas-3.jpg" alt="Imagen de la serie Still Life, 2016">' +
+            '<p>Still life, 2016</p></div>' +
+            '<div class="obra"><img src="./img/reas-7.jpg" alt="Imagen de la obra DETAIL OF PROCESS 13 from PRocess compendium, 2010">' +
+            '<p>DETAIL OF PROCESS 13 from PRocess compendium, 2010</p></div>' +
+            '<div class="obra"><img src="./img/reas-8.jpg" alt="Imagen de la obra Still from atoms, 2023">' +
+            '<p>Still from atoms, 2023</p></div>' +
+            '<div class="obra"><img src="./img/reas-9.jpg" alt="Imagen de la obra Microimage A-06, 2002">' +
+            '<p>Microimage A-06, 2002</p></div>' +
+            '<div class="obra"><img src="./img/reas-10.jpg" alt="Imagen de la serie Details of process, 2005">' +
+            '<p>Details of process, 2005</p></div>';
+    });
 }
 
-// INFO.HTML
-// EL FORMULARIO PARA COMPROBAR SI ESTÁ O NO Y QUE NO HAYA ERROR EN LA CONSOLA
+/* INFO.HTML - FORMULARIO */
 
 const form = document.querySelector('form');
 
 if (form) {
+    
+    const maximoInstalacion = 5;
+    const lista = [];
 
-    // MÁXIMO PARA CARGAR DATOS Y ARRAY PARA GUARDARLOS
+    const inputNombre = document.querySelector('#nombreInstalacion');
+    const inputPersonas = document.querySelector('#numeroPersonas');
+    const inputDias = document.querySelector('#numeroDias');
+    const inputHoras = document.querySelector('#numeroHoras');
+    const inputCobro = document.querySelector('#numeroCobro');
 
-const maximoInstalacion = 5;
-const lista = [];
+    const botonEnviar = document.querySelector('#botonEnviar');
+    const botonReset = document.querySelector('#botonReset');
+    const botonResultados = document.querySelector('#botonResultados');
+    const seccionResultados = document.querySelector('#resultadosFormulario');
 
-// CAPTURA DE LOS ELEMENTOS DEL FORMULARIO
+    // EVENTO AL ENVIAR EL FORMULARIO
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-const inputNombre = document.querySelector('#nombreInstalacion');
-const inputPersonas = document.querySelector('#numeroPersonas');
-const inputDias = document.querySelector('#numeroDias');
-const inputHoras = document.querySelector('#numeroHoras');
-const inputCobro = document.querySelector('#numeroCobro');
+        const personas = Number(inputPersonas.value);
+        const dias = Number(inputDias.value);
+        const horas = Number(inputHoras.value);
+        const cobro = Number(inputCobro.value);
 
-// CAPTURA DE LOS BOTONES Y LA SECCIÓN DE RESULTADOS
+        const costoPorDia = personas * horas * cobro;
 
-const botonEnviar = document.querySelector('#botonEnviar');
-const botonReset = document.querySelector('#botonReset');
-const botonResultados = document.querySelector('#botonResultados');
-const seccionResultados = document.querySelector('#resultadosFormulario');
+        lista.push({
+            nombre: inputNombre.value,
+            dias: dias,
+            costoPorDia: costoPorDia,
+            costoTotal: costoPorDia * dias
+        });
 
-// EVENTO AL ENVIAR EL FORMULARIO
+        form.reset();
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // CONVERTIR LOS VALORES INGRESADOS A NÚMEROS
-
-    let personas = Number(inputPersonas.value);
-    let dias = Number(inputDias.value);
-    let horas = Number(inputHoras.value);
-    let cobro = Number(inputCobro.value);
-
-    // CÁLCULO DEL COSTO POR DÍA
-
-    let costoPorDia = personas * horas * cobro;
-
-    lista.push({
-        nombre: inputNombre.value,
-        dias: dias,
-        costoPorDia: costoPorDia,
-        costoTotal: costoPorDia * dias
+        if (lista.length === maximoInstalacion) {
+            botonEnviar.disabled = true;
+            alert('Has alcanzado el límite de ingreso de instalaciones. ¡Es hora de calcular los resultados!');
+        }
     });
 
-    form.reset();
+    // EVENTO PARA CALCULAR LOS RESULTADOS
+    
+    botonResultados.addEventListener('click', () => {
 
-    // DESHABILITAR EL BOTÓN DE ENVIAR CUÁNDO SE ALCANCE EL LÍMITE
-
-    if (lista.length === maximoInstalacion) {
-        botonEnviar.disabled = true;
-        alert('Haz alcanzado el límite de ingreso de instalaciones ¡Es hora de calcular los resultados!');
-    }
-});
-
-// EVENTO PARA LOS RESULTADOS
-
-botonResultados.addEventListener('click', () => {
-
-    // VALIDACIÓN POR SI NO SE CARGARON DATOS
-
-    if (lista.length === 0) {
-        alert('Por favor ingresa datos antes de calcular los resultados.');
-        return;
-    }
-
-    let costoUnDia = 0;
-    let costoTotalEstudio = 0;
-    let maxInstalacion = lista[0];
-
-    // BUCLE PARA CALCULAR
-
-    for (let i = 0; i < lista.length; i++) {
-        let inst = lista[i];
-
-        // COSTO DE UN DÍA
-
-        costoUnDia += inst.costoPorDia;
-
-        // COSTO TOTAL
-
-        costoTotalEstudio += inst.costoTotal;
-
-        // INSTALACIÓN CON MÁS DÍAS DE PRODUCCIÓN
-
-        if (inst.dias > maxInstalacion.dias) {
-            maxInstalacion = inst;
+        if (lista.length === 0) {
+            alert('Por favor ingresa datos antes de calcular los resultados.');
+            return;
         }
-    }
 
+        let costoUnDia = 0;
+        let costoTotalEstudio = 0;
+        let maxInstalacion = lista[0];
 
-    // LAS MATEMÁTICAS
+        // BUCLE PARA CALCULAR
+        for (let i = 0; i < lista.length; i++) {
+            const inst = lista[i];
 
-    let costo = Math.round(costoUnDia * 100) / 100;
-    let costoMaxInstalacion = Math.round(maxInstalacion.costoTotal * 100) / 100;
-    let porcentaje = Math.round((maxInstalacion.costoTotal / costoTotalEstudio) * 100);
+            costoUnDia += inst.costoPorDia;
+            costoTotalEstudio += inst.costoTotal;
 
-    // INSERTA LOS RESULTADOS EN EL HTML
+            if (inst.dias > maxInstalacion.dias) {
+                maxInstalacion = inst;
+            }
+        }
 
-    seccionResultados.innerHTML =
-        '<h3>Resultados:</h3>' +
-        '<p><b>Costo total de un día de trabajo:</b> $' + costo + '</p>' +
-        '<p><b>Instalación con más días de producción:</b> "' + maxInstalacion.nombre + '" (' + maxInstalacion.dias + ' días) - Costo: $' + costoMaxInstalacion + '</p>' +
-        '<p><b>Porcentaje del costo total:</b> ' + porcentaje + '%</p>';
+        const costo = Math.round(costoUnDia * 100) / 100;
+        const costoMaxInstalacion = Math.round(maxInstalacion.costoTotal * 100) / 100;
+        const porcentaje = Math.round((maxInstalacion.costoTotal / costoTotalEstudio) * 100);
 
-    seccionResultados.classList.remove('oculto');
+        seccionResultados.innerHTML =
+            '<h3>Resultados:</h3>' +
+            '<p><b>Costo total de un día de trabajo:</b> $' + costo + '</p>' +
+            '<p><b>Instalación con más días de producción:</b> "' + maxInstalacion.nombre + '" (' + maxInstalacion.dias + ' días) - Costo: $' + costoMaxInstalacion + '</p>' +
+            '<p><b>Porcentaje del costo total:</b> ' + porcentaje + '%</p>';
 
-    inputNombre.disabled = true;
-    inputPersonas.disabled = true;
-    inputDias.disabled = true;
-    inputHoras.disabled = true;
-    inputCobro.disabled = true;
-    botonEnviar.disabled = true;
-    botonResultados.disabled = true;
-    botonReset.disabled = false;
-    botonReset.classList.remove('oculto');
-});
+        seccionResultados.classList.remove('oculto');
 
-// EVENTO DEL BOTÓN DE REINICIO
+        inputNombre.disabled = true;
+        inputPersonas.disabled = true;
+        inputDias.disabled = true;
+        inputHoras.disabled = true;
+        inputCobro.disabled = true;
+        botonEnviar.disabled = true;
+        botonResultados.disabled = true;
+        botonReset.disabled = false;
+        botonReset.classList.remove('oculto');
+    });
 
-botonReset.addEventListener('click', () => {
+    // EVENTO DEL BOTÓN DE REINICIO
 
-    lista.length = 0;
-    seccionResultados.innerHTML = '';
-    seccionResultados.classList.add('oculto');
+    botonReset.addEventListener('click', () => {
+        lista.length = 0;
+        seccionResultados.innerHTML = '';
+        seccionResultados.classList.add('oculto');
 
-    inputNombre.disabled = false;
-    inputPersonas.disabled = false;
-    inputDias.disabled = false;
-    inputHoras.disabled = false;
-    inputCobro.disabled = false;
-    botonEnviar.disabled = false;
+        inputNombre.disabled = false;
+        inputPersonas.disabled = false;
+        inputDias.disabled = false;
+        inputHoras.disabled = false;
+        inputCobro.disabled = false;
+        botonEnviar.disabled = false;
 
-    form.reset();
-
-    botonResultados.disabled = false;
-    botonReset.disabled = true;
-    botonReset.classList.add('oculto');
-});
+        botonResultados.disabled = false;
+        botonReset.disabled = true;
+        botonReset.classList.add('oculto');
+    });
 }

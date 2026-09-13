@@ -8,16 +8,13 @@
 }
 
 body {
-    display: block;
-    justify-content: center;
     text-align: center;
-    margin: 0;
-    padding: 0;
     background-image: url('../img/fondo.png');
     background-repeat: repeat;
 }
 
 /* CONTENEDOR */
+
 .contenedor {
     display: flex;
     justify-content: space-between;
@@ -39,7 +36,7 @@ header nav ul {
     margin-bottom: 3%;
 }
 
-header nav ul li a {
+header nav ul li a:link {
     text-decoration: none;
     color: #24125E;
     background-color: #7499f0;
@@ -51,6 +48,11 @@ header nav ul li a {
     border-radius: 0.25rem;
 }
 
+header nav ul li a:visited {
+    color: #9e99e9;
+    background-color: #0c104d;
+}
+
 header nav ul li a:hover {
     color: #f9c416;
     background-color: #D15D11;
@@ -59,11 +61,6 @@ header nav ul li a:hover {
 header nav ul li a:active {
     color: #6399ff;
     background-color: #161f9e;
-}
-
-header nav ul li a:visited {
-    color: #1d4080;
-    background-color: #0c104d;
 }
 
 /* TITULOS Y TEXTO */
@@ -139,7 +136,6 @@ article ul li {
     justify-content: space-between;
     background-color: #e3e1fd;
     padding: 2rem;
-    font-family: Arial, sans-serif;
 }
 
 .tituloGaleria {
@@ -163,7 +159,6 @@ article ul li {
 
 .galeriaDeObras .obra p {
     font-size: 0.8rem;
-    font-family: Arial, sans-serif;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -203,14 +198,14 @@ form button {
 }
 
 .oculto {
-  display: none;
+    display: none;
 }
 
-form #resultadosFormulario {
+#resultadosFormulario {
     font-family: Arial, sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #6399ff;
+    color: #e3e1fd;
     background-color: #161f9e;
     margin-top: 3%;
     padding: 1rem;
@@ -305,7 +300,7 @@ button:active {
     font-family: Arial, sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #6399ff;
+    color: #7499f0;
     background-color: #161f9e;
     margin-top: 0.5rem;
     padding: 1rem;
@@ -319,7 +314,8 @@ footer {
     font-size: 1.2rem;
 }
 
-footer address a {
+footer address a:link,
+footer address a:visited {
     text-decoration: none;
     color: #24125E;
 }
@@ -331,10 +327,6 @@ footer address a:hover {
 
 footer address a:active {
     color: #161f9e;
-}
-
-footer address a:visited {
-    color: #6399ff;
 }
 
 /* LÍNEA */
