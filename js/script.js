@@ -49,33 +49,33 @@ if (galeria && botonGaleria) {
 
     // GALERÍA INICIAL
 
-    galeria.innerHTML =
-        '<div class="obra"><img src="../img/reas-1.jpg" alt="Imagen de la serie Still Life, 2016">' +
-        '<p>Still life, 2016</p></div>' +
-        '<div class="obra"><img src="../img/reas-4.jpg" alt="Imagen de la obra CSRSNT-MRIE-24-OF-32.PNG, 2025">' +
-        '<p>CSRSNT-MRIE-24-OF-32.PNG, 2025</p></div>' +
-        '<div class="obra"><img src="../img/reas-2.jpg" alt="Imagen de la serie Path, 2001">' +
-        '<p>Path, 2001</p></div>' +
-        '<div class="obra"><img src="../img/reas-5.jpg" alt="Imagen de la obra CENTURY-XXX-METAJUDD, 2025">' +
-        '<p>CENTURY-XXX-METAJUDD, 2025</p></div>' +
-        '<div class="obra"><img src="../img/reas-6.jpg" alt="Imagen de la obra Study for a Garden of Earthly Delights, No. 4, 2018">' +
-        '<p>Study for a Garden of Earthly Delights, No. 4, 2018</p></div>';
+    // RENDERIZADO INICIAL DE LA GALERÍA
+galeria.innerHTML = 
+  '<div class="obra"><img src="./img/reas-1.jpg" alt="Imagen de la serie Still Life, 2016">' + 
+  '<p>Still life, 2016</p></div>' + 
+  '<div class="obra"><img src="./img/reas-4.jpg" alt="Imagen de la obra CSRSNT-MRIE-24-OF-32.PNG, 2025">' + 
+  '<p>CSRSNT-MRIE-24-OF-32.PNG, 2025</p></div>' + 
+  '<div class="obra"><img src="./img/reas-2.jpg" alt="Imagen de la serie Path, 2001">' + 
+  '<p>Path, 2001</p></div>' + 
+  '<div class="obra"><img src="./img/reas-5.jpg" alt="Imagen de la obra CENTURY-XXX-METAJUDD, 2025">' + 
+  '<p>CENTURY-XXX-METAJUDD, 2025</p></div>' + 
+  '<div class="obra"><img src="./img/reas-6.jpg" alt="Imagen de la obra Study for a Garden of Earthly Delights, No. 4, 2018">' + 
+  '<p>Study for a Garden of Earthly Delights, No. 4, 2018</p></div>';
 
-    // CAMBIA LA GALERÍA AL HACER CLICK
-
-    botonGaleria.addEventListener('click', function () {
-        galeria.innerHTML =
-            '<div class="obra"><img src="../img/reas-3.jpg" alt="Imagen de la serie Still Life, 2016">' +
-            '<p>Still life, 2016</p></div>' +
-            '<div class="obra"><img src="../img/reas-7.jpg" alt="Imagen de la obra DETAIL OF PROCESS 13 from PRocess compendium, 2010">' +
-            '<p>DETAIL OF PROCESS 13 from PRocess compendium, 2010</p></div>' +
-            '<div class="obra"><img src="../img/reas-8.jpg" alt="Imagen de la obra Still from atoms, 2023">' +
-            '<p>Still from atoms, 2023</p></div>' +
-            '<div class="obra"><img src="../img/reas-9.jpg" alt="Imagen de la obra Microimage A-06, 2002">' +
-            '<p>Microimage A-06, 2002</p></div>' +
-            '<div class="obra"><img src="../img/reas-10.jpg" alt="Imagen de la serie Details of process, 2005">' +
-            '<p>Details of process, 2005</p></div>';
-    });
+// CAMBIA LA GALERÍA AL HACER CLICK
+botonGaleria.addEventListener('click', function () { 
+  galeria.innerHTML = 
+    '<div class="obra"><img src="./img/reas-3.jpg" alt="Imagen de la serie Still Life, 2016">' + 
+    '<p>Still life, 2016</p></div>' + 
+    '<div class="obra"><img src="./img/reas-7.jpg" alt="Imagen de la obra DETAIL OF PROCESS 13 from PRocess compendium, 2010">' + 
+    '<p>DETAIL OF PROCESS 13 from PRocess compendium, 2010</p></div>' + 
+    '<div class="obra"><img src="./img/reas-8.jpg" alt="Imagen de la obra Still from atoms, 2023">' + 
+    '<p>Still from atoms, 2023</p></div>' + 
+    '<div class="obra"><img src="./img/reas-9.jpg" alt="Imagen de la obra Microimage A-06, 2002">' + 
+    '<p>Microimage A-06, 2002</p></div>' + 
+    '<div class="obra"><img src="./img/reas-10.jpg" alt="Imagen de la serie Details of process, 2005">' + 
+    '<p>Details of process, 2005</p></div>'; 
+});
 }
 
 // INFO.HTML
